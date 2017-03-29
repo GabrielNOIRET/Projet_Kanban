@@ -1,1 +1,6 @@
-html, body {background-color: grey;}
+html, body {background-color: grey;
+  display: flex;}
+
+#ajout {background-color:white;
+  padding: 10px;
+  ;}
