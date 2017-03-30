@@ -1,0 +1,108 @@
+body, html {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  }
+
+header {background-color: #484848;
+  color: #FFFFFF;
+  height: 10vh;
+ 
+ 
+  }
+
+
+#topbtn{
+    color: #FFFFFF;
+    position: absolute;
+
+ 
+    
+}
+
+h1{
+    font-family: 'Muli', sans-serif;
+    font-weight: 100;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+section {
+display: flex;
+flex-direction: column;
+height: 84.0vh;
+background-color:#C9C9C9;
+}
+
+#section_img {
+display: flex;
+flex-direction: column;
+height: 84.0vh;
+background-image: url('Images/O7MF5N0.jpg');
+background-size: 100% 100%;
+}
+
+#bienvenue {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 25vh;
+  color: rgba(255, 255, 255, 0.8);;
+  font-family: 'Muli', sans-serif;
+  font-size: 4.5em;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+
+
+}
+#boutons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+}
+
+.bouton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  opacity: 0.55;
+  font-weight: bold;
+  font-family: 'Alegreya', serif;
+  font-size: 1em;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid #28B485;
+  height: 15vh;
+  width: 15vh;}
+
+  .bouton:hover {background-color: #28B485;
+    opacity: 1;
+    border: 2px solid white;}
+  .bouton:active {background-color: #1A7753;}
+
+  #bar_verte{
+    background-color: #28B485;
+    height:0.5vh;
+  }
+
+footer {background-color: #484848;
+  color: white;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+  a {padding: 0;
+    color: blue;
+    text-decoration: none;}
+
+#lien_github {color: white;
+  padding: 2vh;}
+
+  p{margin: 0;}
+
+
