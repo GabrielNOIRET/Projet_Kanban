@@ -21,6 +21,13 @@ section {
 display: flex;
 flex-direction: column;
 height: 84.0vh;
+background-color:#C9C9C9;
+}
+
+#section_img {
+display: flex;
+flex-direction: column;
+height: 84.0vh;
 background-image: url('Images/O7MF5N0.jpg');
 background-size: 100% 100%;
 }
@@ -82,3 +89,5 @@ footer {background-color: #484848;
     text-decoration: none;}
 
   p{margin: 0;}
+
+#bouton_return {position: absolute;}
