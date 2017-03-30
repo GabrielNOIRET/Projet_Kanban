@@ -8,14 +8,26 @@ body, html {
 header {background-color: #484848;
   color: #FFFFFF;
   height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
+ 
   }
 
-h1{font-family: 'Muli', sans-serif;
-font-weight: 100;
-font-size: 2em;}
+
+#topbtn{
+    color: #FFFFFF;
+    position: absolute;
+
+ 
+    
+}
+
+h1{
+    font-family: 'Muli', sans-serif;
+    font-weight: 100;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+}
 
 section {
 display: flex;
@@ -84,10 +96,13 @@ footer {background-color: #484848;
   align-items: center;
 }
 
-  a {padding: 2vh;
-    color: white;
+  a {padding: 0;
+    color: blue;
     text-decoration: none;}
+
+#lien_github {color: white;
+  padding: 2vh;}
 
   p{margin: 0;}
 
-#bouton_return {position: absolute;}
+

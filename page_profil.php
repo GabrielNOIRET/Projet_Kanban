@@ -10,7 +10,7 @@
     <?php include 'element_page/header_btn.php'; ?>
 
   <section>
-    <?php include '../phpmembre/inscription.php'; ?>
+    <?php include '../phpmembre/profil.php'; ?>
   </section>
 
     <?php include 'element_page/footer.php'; ?>
