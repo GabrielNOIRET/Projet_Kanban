@@ -1,5 +1,3 @@
-/* ---------- Paramètres généraux ---------*/
-
 body, html {
   display: flex;
   padding: 0;
@@ -7,7 +5,21 @@ body, html {
   flex-direction: column;
   }
 
-/*----- Ecriture -----*/
+header {background-color: #484848;
+  color: #FFFFFF;
+  height: 10vh;
+ 
+ 
+  }
+
+
+#topbtn{
+    color: #FFFFFF;
+    position: absolute;
+
+ 
+    
+}
 
 h1{
     font-family: 'Muli', sans-serif;
@@ -15,38 +27,22 @@ h1{
     font-size: 2em;
     text-align: center;
     vertical-align: middle;
-	}
-
-/*---------- En-tête ----------*/
-
-header {
-	background-color: #484848;
-  	color: #FFFFFF;
-  	height: 10vh;
-  }
-
-
-#topbtn{
-    color: #FFFFFF;
-    position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/   
-	}
-
-/*---------- Section de la page ----------*/
+}
 
 section {
-	display: flex;
-	flex-direction: column;
-	height: 84.0vh;
-	background-color:#C9C9C9;
-	}
+display: flex;
+flex-direction: column;
+height: 84.0vh;
+background-color:#C9C9C9;
+}
 
 #section_img {
-	display: flex;
-	flex-direction: column;
-	height: 84.0vh;
-	background-image: url('Images/O7MF5N0.jpg');
-	background-size: 100% 100%;
-	}
+display: flex;
+flex-direction: column;
+height: 84.0vh;
+background-image: url('Images/O7MF5N0.jpg');
+background-size: 100% 100%;
+}
 
 #bienvenue {
   display: flex;
@@ -57,16 +53,16 @@ section {
   font-family: 'Muli', sans-serif;
   font-size: 4.5em;
   text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-	}
 
-/*----- Section page d'acceuil -----*/
 
+
+}
 #boutons{
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 75vh;
-	}
+}
 
 .bouton{
   display: flex;
@@ -93,24 +89,19 @@ section {
     height:0.5vh;
   }
 
-/*---------Pied de page ---------*/
-
-footer {
-	background-color: #484848;
-	color: white;
-	height: 5vh;
-	display: flex;
-	align-items: center;
-	}
+footer {background-color: #484848;
+  color: white;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
 
   a {padding: 0;
     color: blue;
     text-decoration: none;}
 
-#lien_github {
-	color: white;
-	padding: 2vh;
-	}
+#lien_github {color: white;
+  padding: 2vh;}
 
   p{margin: 0;}
 

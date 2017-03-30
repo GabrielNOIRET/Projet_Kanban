@@ -34,6 +34,11 @@ if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 	<a href ="#">Editer mon profil </a>
 	<br />
 	<a href ="deconnexion.php">Se deconnecter
+	<br />
+	<a href ="../pages_web/page_creation_projet.
+	php">Creer un projet
+	<br />
+	<a href ="../pages_web/page_connexion_projet.php">Connexion à un projet
 	<?php
 }
 ?>
@@ -42,6 +47,6 @@ if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 </body>
 </html>
 
-<?php	
+<?php
 }
 ?>

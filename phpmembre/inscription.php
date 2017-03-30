@@ -32,7 +32,7 @@ if(isset($_POST['forminscription']))
 						{
 							$insertmbr = $bdd->prepare("INSERT INTO membres(pseudo, mail, motdepasse) VALUES(?, ?, ?) ");
 							$insertmbr->execute(array($pseudo, $mail, $mdp));
-							$erreur = "Votre compte a bien été créé <a href=\"connexion.php\">Me connecter</a>";
+							$erreur = "Votre compte a bien été créé <a href=\"../pages_web/page_connexion.php\">Me connecter</a>";
 						}
 						else
 						{
@@ -144,4 +144,3 @@ if(isset($erreur))
 
 </body>
 </html>
-
