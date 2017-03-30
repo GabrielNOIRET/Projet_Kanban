@@ -1,0 +1,53 @@
+#button{
+    margin-top: 10px;
+}
+
+#ajout {background-color:white;
+  padding: 10px;
+  ;}
+
+#ListProjet{
+    padding-top: 30px;
+    padding-left: 80px;
+    
+}
+
+#ListUtilisateur{
+    padding-left: 250px;
+    padding-top: 30px;
+}
+
+#ListPersonnes{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+#tableauprojet{
+    border: 2;
+    width: 250;
+}
+
+#firstlist{
+    display: none;
+}
+
+#tableau_utilisateur{
+    border: 2px;
+    width: 250px;
+    margin-left: 400px;
+    
+}
+
+#modifier{
+    padding-top: 300px;   
+}
+
+
+td{
+    text-align: center;
+}
+
+div{
+    float: left;
+}
+
