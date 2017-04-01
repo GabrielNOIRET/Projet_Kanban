@@ -23,6 +23,17 @@ if(isset($_GET['id']) AND $_GET['id'] > 0)
 <div align="center">
 	<h2>Profil de <?php echo $userinfo['pseudo']; ?></h2>
 <br /><br />
+<div id = "photodeprofil">
+<?php
+if(!empty($userinfo['avatar']))
+{
+?>
+<img src="membres/avatar/<?php echo $userinfo['avatar'];?>" width="150" />
+<?php 
+}
+?>	
+
+</div>
 pseudo = <?php echo $userinfo['pseudo']; ?>
 <br />
 Mail = <?php echo $userinfo['mail']; ?>
@@ -31,14 +42,14 @@ Mail = <?php echo $userinfo['mail']; ?>
 if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 {
 	?>
-	<a href ="#">Editer mon profil </a>
+	<a href ="edition_profil.php">Editer mon profil </a>
 	<br />
 	<a href ="deconnexion.php">Se deconnecter
 	<br />
-	<a href ="../pages_web/page_creation_projet.
+	<a href ="creation_projet.
 	php">Creer un projet
 	<br />
-	<a href ="../pages_web/page_connexion_projet.php">Connexion à un projet
+	<a href ="connexion_projet.php">Connexion à un projet
 	<?php
 }
 ?>
@@ -47,6 +58,6 @@ if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 </body>
 </html>
 
-<?php
+<?php	
 }
 ?>
