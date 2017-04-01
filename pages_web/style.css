@@ -1,3 +1,5 @@
+/* ---------- Paramètres généraux ---------*/
+
 body, html {
   display: flex;
   padding: 0;
@@ -5,21 +7,7 @@ body, html {
   flex-direction: column;
   }
 
-header {background-color: #484848;
-  color: #FFFFFF;
-  height: 10vh;
- 
- 
-  }
-
-
-#topbtn{
-    color: #FFFFFF;
-    position: absolute;
-
- 
-    
-}
+/*----- Ecriture -----*/
 
 h1{
     font-family: 'Muli', sans-serif;
@@ -27,42 +15,70 @@ h1{
     font-size: 2em;
     text-align: center;
     vertical-align: middle;
-}
+	}
+
+  p{
+  	margin: 0;
+  	}
+
+/*---------- En-tête ----------*/
+
+header {
+	background-color: #484848;
+  	color: #FFFFFF;
+  	height: 10vh;
+  }
+
+
+#topbtn{
+    color: #FFFFFF;
+    position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/   
+	}
+
+
+/* ---------------Page index --------------*/
+/*---------- Section de la page ----------*/
 
 section {
-display: flex;
-flex-direction: column;
-height: 84.0vh;
-background-color:#C9C9C9;
-}
+	display: flex;
+	flex-direction: column;
+	height: 84.0vh;
+	background-color:#C9C9C9;
+	}
 
 #section_img {
-display: flex;
-flex-direction: column;
-height: 84.0vh;
-background-image: url('Images/O7MF5N0.jpg');
-background-size: 100% 100%;
-}
+	display: flex;
+	flex-direction: column;
+	height: 84.0vh;
+  background:url(Images/O7MF5N0.jpg) -25px -50px;
+  z-index:0;
+  background-size: calc(125% + 50px);
+	}
 
 #bienvenue {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   height: 25vh;
-  color: rgba(255, 255, 255, 0.8);;
+  color: rgba(255, 255, 255, 0.9);;
   font-family: 'Muli', sans-serif;
   font-size: 4.5em;
   text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	}
 
+  #bar_verte{
+    background-color: #28B485;
+    height:0.5vh;
+  }
 
+/*----- Section page d'acceuil -----*/
 
-}
 #boutons{
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 75vh;
-}
+	}
 
 .bouton{
   display: flex;
@@ -84,25 +100,25 @@ background-size: 100% 100%;
     border: 2px solid white;}
   .bouton:active {background-color: #1A7753;}
 
-  #bar_verte{
-    background-color: #28B485;
-    height:0.5vh;
-  }
+/*---------Pied de page ---------*/
 
-footer {background-color: #484848;
-  color: white;
-  height: 5vh;
-  display: flex;
-  align-items: center;
-}
+footer {
+	background-color: #484848;
+	color: white;
+	height: 5vh;
+	display: flex;
+	align-items: center;
+	}
 
   a {padding: 0;
     color: blue;
     text-decoration: none;}
 
-#lien_github {color: white;
-  padding: 2vh;}
+#lien_github {
+	color: white;
+	padding: 2vh;
+	}
 
-  p{margin: 0;}
+
 
 
