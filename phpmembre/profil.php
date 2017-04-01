@@ -30,6 +30,10 @@ if(!empty($userinfo['avatar']))
 ?>
 <img src="membres/avatar/<?php echo $userinfo['avatar'];?>" width="150" />
 <?php 
+}else{
+	?>
+	<img src="http://www.aruvart.com/tableaux-photos/Peinture-abstraite-DOUCE-TENTATION_840.jpg" width="150" />
+<?php
 }
 ?>	
 
