@@ -46,14 +46,14 @@ Mail = <?php echo $userinfo['mail']; ?>
 if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 {
 	?>
-	<a href ="edition_profil.php">Editer mon profil </a>
+	<a href ="../pages_web/page_edition_profil.php">Editer mon profil </a>
 	<br />
 	<a href ="deconnexion.php">Se deconnecter
 	<br />
 	<a href ="creation_projet.
 	php">Creer un projet
 	<br />
-	<a href ="connexion_projet.php">Connexion à un projet
+	<a href ="../pages_web/page_connexion_projet.php">Connexion à un projet
 	<?php
 }
 ?>

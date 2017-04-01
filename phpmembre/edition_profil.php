@@ -123,6 +123,6 @@ if(isset($_SESSION['id']))
 <?php	
 }
 else{
-	header("Location : connexion.php");
+	header("Location : ../pages_web/page_connexion.php");
 }
 ?>

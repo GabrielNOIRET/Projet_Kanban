@@ -5,16 +5,19 @@ body, html {
   padding: 0;
   margin: 0;
   flex-direction: column;
+  overflow-y: hidden
   }
+
+
 
 /*----- Ecriture -----*/
 
 h1{
-    font-family: 'Muli', sans-serif;
-    font-weight: 100;
-    font-size: 1.8em;
-    text-align: center;
-    vertical-align: middle;
+  font-family: 'Muli', sans-serif;
+  font-weight: 100;
+  font-size: 1.8em;
+  text-align: center;
+  vertical-align: middle;
 	}
 
   p{
@@ -25,15 +28,15 @@ h1{
 
 header {
 	background-color: #484848;
-  	color: #FFFFFF;
-  	height: 10vh;
+  color: #FFFFFF;
+  height: 10vh;
   }
 
 
 #topbtn{
-    color: #FFFFFF;
-    font-style: italic;
-    position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/   
+  color: #FFFFFF;
+  font-style: italic;
+  position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/   
 	}
 
 
@@ -50,11 +53,13 @@ section {
 #section_img {
 	display: flex;
 	flex-direction: column;
-	height: 84.0vh;
+  background-repeat: no-repeat;
+	height: 84vh;
   background:url(Images/O7MF5N0.jpg) -25px -50px;
-  z-index:0;
+  z-index: 0;
   background-size: calc(125% + 50px);
 	}
+
 
 #bienvenue {
   display: flex;
@@ -65,11 +70,11 @@ section {
   font-family: 'Muli', sans-serif;
   font-size: 4.5em;
   text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
-	}
+  }
 
-  #bar_verte{
-    background-color: #28B485;
-    height:0.5vh;
+#bar_verte{
+  background-color: #28B485;
+  height:0.5vh;
   }
 
 /*----- Section page d'acceuil -----*/
@@ -95,18 +100,20 @@ section {
   border: 2px solid #28B485;
   height: 15vh;
   width: 15vh;}
-
-  .bouton:hover {background-color: #28B485;
+.bouton:hover {
+    background-color: #28B485;
     opacity: 1;
     border: 2px solid white;}
-  .bouton:active {background-color: #1A7753;}
+.bouton:active{
+  background-color: #1A7753;
+  }
 
 /*---------Pied de page ---------*/
 
 footer {
 	background-color: #484848;
 	color: white;
-	height: 5vh;
+	height: 6vh;
 	display: flex;
 	align-items: center;
 	}
