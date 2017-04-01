@@ -7,6 +7,7 @@
       
     <!-- modifier la police-->   
     <link href="https://fonts.googleapis.com/css?family=Alegreya|Josefin+Sans|Muli|Slabo+27px" rel="stylesheet">
+    
   </head>
   <body>
     <!--ajouter le header avec le titre sans le boutton pour revenir à l'accueil-->
