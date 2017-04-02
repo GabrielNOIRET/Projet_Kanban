@@ -77,7 +77,6 @@ if(isset($_SESSION['id']))
 			}
 ?>
 
-
 <html>
 	<head>
 		<title>Edition du profil</title>
