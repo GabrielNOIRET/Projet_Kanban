@@ -48,11 +48,11 @@
 					if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 					{
 				?>
-					<a href ="edition_profil.php">Editer mon profil </a>
+					<a href ="page_edition_profil.php">Editer mon profil </a>
 					<br />
-					<a href ="deconnexion.php">Se deconnecter </a>
+					<a href ="../phpmembre/deconnexion.php">Se deconnecter </a>
 					<br />
-					<a href ="creation_projet.php">Creer un projet </a>
+					<a href ="page_creation_projet.php">Creer un projet </a>
 					<br />
 				<?php
 					}
@@ -76,7 +76,7 @@
                             foreach ($check as $ch) 
                             {
 
-                            	header("Location: profil_projet.php?id=".$ch);
+                            	header("Location: page_profil_projet.php?id=".$ch);
                             }}
 
 
