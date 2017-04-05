@@ -19,6 +19,5 @@
   </section>
     <!-- ajouter footer : lien vers le github de notre travail-->
     <?php include 'element_page/footer.php'; ?>
-    <p>fff</p>
   </body>
 </html>
