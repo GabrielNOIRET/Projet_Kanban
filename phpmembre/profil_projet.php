@@ -2,20 +2,40 @@
 session_start();
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre', 'root', '');
 
-
-
-if(isset($_GET['id']) AND $_GET['id'] > 0)
-{
-
-	$getid = intval($_GET['id']);
-	$requser = $bdd->prepare("SELECT * FROM projets WHERE id = ?");
-	$requser->execute(array($getid));
+//if(isset($_GET['id']) AND $_GET['id'] > 0)
+//{
+	$projet = $_GET['id'];
+	$requser = $bdd->prepare("SELECT * FROM projets WHERE nom = ?");
+	$requser->execute(array($projet));
 	$userinfo = $requser->fetch();
-	$user_admin = $userinfo["admin"];
+	echo $projet;
+
+?>
+<?php
+if(isset($_POST['mailform'])){
+$header="MIME-Version: 1.0\r\n";
+$header.='From:"Projet.com"<support@projet.com'."\n";
+$header.='Content-Type:text/html; charset="uft-8"'."\n";
+$header.='Content-Transfer-Encoding: 8bit';
+
+$message='
+<html>
+	<body>
+		<div align="center">
+			<img src="http://www.sosiphone.com/blogiphone/wp-content/uploads//2011/02/Pac-Man-banniere.jpg>
+			<br />
+			J\'ai envoyé ce mail avec PHP !
+			<br />
+		</div>
+	</body>
+</html>
+';
+
+mail("atest@gmail.com", "Salut tout le monde !", $message, $header);
+}
 
 
 ?>
-
 
 <html>
 <head>
@@ -30,8 +50,8 @@ Nom du projet = <?php echo $userinfo['nom']; ?>
 <br />
 <?php
 
-if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
-{
+//if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
+//{
 	?>
 
 
@@ -43,6 +63,10 @@ if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 <input type="text" name="invite_nom" value ="Nom d'utilisateur ami" id="invite_nom"/>
 <br /><br />
 <input type="submit" name="formconnexion" value="Envoyer l'invitation">
+
+</form>
+<form method="POST" action="">
+	<input type="submit" value="Recevoir un mail !" name="mailform"/>
 </form>
 
 
@@ -50,11 +74,11 @@ if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
 <br /><br />
 Les membres :
 <br /><br />
-Admin : <?php echo" $user_admin" ?>
+Admin : 
 <br />
 
 	<?php
-}
+//}
 ?>
 
 
@@ -62,5 +86,5 @@ Admin : <?php echo" $user_admin" ?>
 </html>
 
 <?php	
-}
+//}
 ?>

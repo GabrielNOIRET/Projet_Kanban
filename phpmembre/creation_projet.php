@@ -23,7 +23,9 @@
 								{
 									$insertproj = $bdd->prepare("INSERT INTO projets(nom, admin) VALUES(?, ?) ");
 									$insertproj->execute(array($nom, $user_admin));
-									header("Location: membres_projet.php?nom=".$nom);
+									$userinfo = $reqnom->fetch();
+                                    $_SESSION['nom_projet'] = $nom;
+									header("Location: membres_projet.php?nom=");
 								}
 								else
 								{

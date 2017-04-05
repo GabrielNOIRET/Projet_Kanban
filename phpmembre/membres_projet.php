@@ -1,7 +1,7 @@
 <meta charset="utf-8">
     <?php
         session_start();
-            $projet = $_GET['nom'];
+            $projet = $_SESSION["nom_projet"];
             $bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre', 'root', '');
             $reponse = $bdd->query('SELECT * FROM membres');
                 if(isset($_GET['q']) AND !empty($_GET['q']))
@@ -29,7 +29,12 @@
                                     {
                                         $insertmbr = $bdd->prepare("INSERT INTO membres_projet(nom_user, nom_projet) VALUES(?, ?) ");
                                         $insertmbr->execute(array($ch, $projet));
-                                        $confirmation = "L'utilisateur " .$ch. " a bien été ajouté au projet";    
+                                        $userinfo = $reqnom->fetch();
+                                        $_SESSION['id'] = $userinfo['id'];
+                                        $_SESSION['nom_user'] = $userinfo['nom_user'];
+                                        $_SESSION['nom_projet'] = $userinfo['nom_projet'];
+                                        $confirmation = "L'utilisateur " .$ch. " a bien été ajouté au projet";
+
                                     }
                                     else
                                     {
@@ -94,7 +99,8 @@
                 if(isset($confirmation))
                 {
                     echo '<font color="green">'.$confirmation."</font>";
-                }
+                }else
+                {
             ?>
         <br/>
             <?php
@@ -110,4 +116,5 @@
                             }
                     }       
                 }
+            }
             ?>

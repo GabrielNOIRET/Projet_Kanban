@@ -100,19 +100,6 @@ if(isset($_SESSION['id']))
 				<input type="file" name="avatar" /><br /><br />
 				<input type="submit" value="Mettre a jour le formulaire" />
 			</form>
-<<<<<<< HEAD
-			<?php if(isset($msg)){echo $msg;} ?>
-</div>
-</body>
-</html>
-
-<?php	
-}
-else{
-	header("Location : ../pages_web/page_connexion.php");
-}
-?>
-=======
 		<?php
 			if(isset($msg)){echo $msg;}
 		?>
@@ -126,4 +113,3 @@ else{
 	?>
 	</body>
 </html>
->>>>>>> origin/master

@@ -16,53 +16,6 @@
 ?>
 
 <html>
-<<<<<<< HEAD
-<head>
-	<title>Inscriptions</title>
-	<meta charset="utf-8">
-</head>
-<body>
-<div align="center">
-	<h2>Profil de <?php echo $userinfo['pseudo']; ?></h2>
-<br /><br />
-<div id = "photodeprofil">
-<?php
-if(!empty($userinfo['avatar']))
-{
-?>
-<img src="membres/avatar/<?php echo $userinfo['avatar'];?>" width="150" />
-<?php 
-}else{
-	?>
-	<img src="http://www.aruvart.com/tableaux-photos/Peinture-abstraite-DOUCE-TENTATION_840.jpg" width="150" />
-<?php
-}
-?>	
-
-</div>
-pseudo = <?php echo $userinfo['pseudo']; ?>
-<br />
-Mail = <?php echo $userinfo['mail']; ?>
-<br />
-<?php
-if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
-{
-	?>
-	<a href ="../pages_web/page_edition_profil.php">Editer mon profil </a>
-	<br />
-	<a href ="deconnexion.php">Se deconnecter
-	<br />
-	<a href ="creation_projet.
-	php">Creer un projet
-	<br />
-	<a href ="../pages_web/page_connexion_projet.php">Connexion à un projet
-	<?php
-}
-?>
-
-
-</body>
-=======
 	<head>
 		<title>Profil utilisateur</title>
 		<meta charset="utf-8">
@@ -109,9 +62,25 @@ if(isset($_SESSION['id']) AND $userinfo['id'] == $_SESSION['id'])
                 ?>
         			<li>
                     Projet :  <?php echo $a['nom_projet']; ?>;
+                    <form action=" " method="post">
+                    <input type="checkbox" name="check[]" id="ajouter1" value="<?php echo $a['nom_projet']; ?>" />
                 <?php 
         } 
+
         		?>
+        		<input type="submit" name="sub" value="Rejoindre" />
+        		<?php
+        		if(isset($_POST['check']))
+                        {
+                        	 $check = $_POST['check'];
+                            foreach ($check as $ch) 
+                            {
+
+                            	header("Location: profil_projet.php?id=".$ch);
+                            }}
+
+
+        		?>
+        </form>
 	</body>
->>>>>>> origin/master
 </html>
