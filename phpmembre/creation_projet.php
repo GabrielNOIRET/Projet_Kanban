@@ -25,7 +25,7 @@
 									$insertproj->execute(array($nom, $user_admin));
 									$userinfo = $reqnom->fetch();
                                     $_SESSION['nom_projet'] = $nom;
-									header("Location: membres_projet.php?nom=");
+									header("Location:page_membres_projet.php?nom=");
 								}
 								else
 								{
@@ -78,7 +78,7 @@
 			}
 			else
 			{
-				header("Location : connexion.php");
+				header("Location : page_connexion.php");
 			}
 	?>
 	</body>

@@ -29,7 +29,7 @@ if(isset($_SESSION['id']))
 				{
 					$insertmdp = $bdd->prepare("UPDATE membres SET motdepasse = ? WHERE id = ?");
 					$insertmdp->execute(array($_mdp1, $_SESSION['id']));
-					header('Location: profil.php?id='.$_SESSION['id']);
+					header('Location: ../pages_web/page_profil.php?id='.$_SESSION['id']);
 				}
 				else
 				{
@@ -54,7 +54,7 @@ if(isset($_SESSION['id']))
 								'avatar' => $_SESSION['id'].".".$extensionUpload,
 								'id' => $_SESSION['id']
 							));
-							header('Location: profil.php?id='.$_SESSION['id']);
+							header('Location: ../pages_web/page_profil.php?id='.$_SESSION['id']);
 						}
 						else
 						{
@@ -73,7 +73,7 @@ if(isset($_SESSION['id']))
 			}
 			if(isset($_POST['newpseudo']) AND $_POST['newpseudo'] == $user['pseudo'])
 			{
-				header('Location: profil.php?id='.$_SESSION['id']);
+				header('Location: ../pages_web/page_profil.php?id='.$_SESSION['id']);
 			}
 ?>
 
