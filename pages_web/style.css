@@ -116,9 +116,6 @@ footer {
 	height: 6vh;
 	display: flex;
 	align-items: center;
-    justify-content: space-between;
-    padding-right: 2vh;
-    font-style: italic;
 	}
 
   a {padding: 0;
@@ -133,5 +130,112 @@ footer {
 #lien_github:hover {text-decoration: underline;}
 
 
+/*----------page tabelau---------*/
+{
+  font-family: 'Segoe UI';
+}
+li {
+  list-style: none;
+  padding: 5px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin: 0 0 5px;
+}
+ul {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 22%;
+  margin: 0 0.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+ul.over {
+  padding-bottom: 55px;
+  background: url('http://www.cufonfonts.com/makeImage.php?width=650&id=1026&size=35&d=y&text=Drop%20Here') center bottom no-repeat #ccc;
+}
+ul.over li {
+  background: #fff;
+}
+
+#board div h3 {display: inline-block; width: 22%; margin: 1%; text-align: center;}
 
 
+/*----------Inscription----------**/
+#form_iscription {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	} 
+
+/* Basic Grey */
+.form_inscription {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;}
+.form_inscription h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;}
+.form_inscription label {
+    display: block;
+    margin: 0px;}
+.form_inscription input {
+	width: 80%;
+}
+
+.form_inscription input[type="text"], .form_inscription input[type="email"], .form_inscription textarea, .form_inscription select {
+    border: 1px solid #DADADA;
+    color: #888;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding:5px 5px 5px 8px;
+    width: 80%;
+    font-size: 12px;
+    line-height:15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;}
+.form_inscription textarea{
+	padding: 5px 3px 3px 5px;
+}
+
+.form_inscription textarea{
+    height:100px;
+}
+.form_inscription .button {
+    background: #28B485;
+    border: none;
+    width: 40%;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;}
+.form_inscription .button:hover {
+    background: #1A7753
+}
+
+.form_inscription .button_deja {
+	background-color: #C9C9C9;
+	width: 20%;
+	border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;}

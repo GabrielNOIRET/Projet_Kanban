@@ -76,10 +76,10 @@ if(isset($_POST['forminscription']))
 	<meta charset="utf-8">
 </head>
 <body>
-<div align="center">
-	<h2>Inscitptions</h2>
+<div id='form_iscription'>
 <br /><br />
-	<form method="POST" action="">
+	<form method="POST" action="" class="form_inscription">
+		<h1>Inscription</h1>
 		<table>
 			<tr>
 				<td align="right">
@@ -124,7 +124,8 @@ if(isset($_POST['forminscription']))
 		<tr>
 			<td></td>
 			<td align="center">
-				<input type="submit" value ="Je m'inscris" name="forminscription"/>
+				<input type="submit" value ="Je m'inscris" name="forminscription" class="button"/>
+				<a href="page_connexion" class="button_deja">Je suis déja inscrit</a>
 			</td>
 		</tr>
 	</table>

@@ -12,14 +12,14 @@ if(isset($_SESSION['id']))
 		$newpseudo = htmlspecialchars($_POST["newpseudo"]);
 		$insertpseudo = $bdd->prepare("UPDATE membres SET pseudo =? WHERE id =?");
 		$insertpseudo->execute(array($newpseudo, $_SESSION['id']));
-		header('Location: profil.php?id='.$_SESSION['id']);
+		header('Location: ../pages_web/page_profil.php?id='.$_SESSION['id']);
 	}
 		if(isset($_POST["newmail"]) AND !empty($_POST["newmail"]) AND $_POST['newmail'] != $user["mail"])
 		{
 			$newmail = htmlspecialchars($_POST["newmail"]);
 			$insertpseudo = $bdd->prepare("UPDATE membres SET mail =? WHERE id =?");
 			$insertpseudo->execute(array($newmail, $_SESSION['id']));
-			header('Location: profil.php?id='.$_SESSION['id']);
+			header('Location: ../pages_web/page_profil.php?id='.$_SESSION['id']);
 		}
 			if(isset($_POST["newmd1"]) AND !empty($_POST["newmdp1"]) AND isset($_POST["newmd2"]) AND !empty($_POST["newmdp2"]))
 			{
@@ -29,7 +29,7 @@ if(isset($_SESSION['id']))
 				{
 					$insertmdp = $bdd->prepare("UPDATE membres SET motdepasse = ? WHERE id = ?");
 					$insertmdp->execute(array($_mdp1, $_SESSION['id']));
-					header('Location: ../pages_web/page_profil.php?id='.$_SESSION['id']);
+					header('Location: profil.php?id='.$_SESSION['id']);
 				}
 				else
 				{
@@ -108,7 +108,7 @@ if(isset($_SESSION['id']))
 	}
 	else
 	{
-		header("Location : connexion.php");
+		header("Location : ../pages_web/page_connexion.php");
 	}
 	?>
 	</body>
