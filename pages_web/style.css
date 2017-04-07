@@ -36,7 +36,7 @@ header {
 #topbtn{
   color: #FFFFFF;
   font-style: italic;
-  position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/   
+  position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/
 	}
 
 
@@ -166,7 +166,7 @@ ul.over li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	} 
+	}
 
 /* Basic Grey */
 .form_inscription {
@@ -193,21 +193,6 @@ ul.over li {
 	width: 80%;
 }
 
-.form_inscription input[type="text"], .form_inscription input[type="email"], .form_inscription textarea, .form_inscription select {
-    border: 1px solid #DADADA;
-    color: #888;
-    height: 30px;
-    margin-bottom: 16px;
-    margin-right: 6px;
-    margin-top: 2px;
-    outline: 0 none;
-    padding:5px 5px 5px 8px;
-    width: 80%;
-    font-size: 12px;
-    line-height:15px;
-    box-shadow: inset 0px 1px 4px #ECECEC;
-    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
-    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;}
 .form_inscription textarea{
 	padding: 5px 3px 3px 5px;
 }
@@ -231,11 +216,11 @@ ul.over li {
 
 .form_inscription .button_deja {
 	background-color: #C9C9C9;
-	width: 20%;
+	width: 10px;
 	border: none;
-    padding: 10px 25px 10px 25px;
-    color: #FFF;
-    box-shadow: 1px 1px 5px #B6B6B6;
-    border-radius: 3px;
-    text-shadow: 1px 1px 1px #9E3F3F;
-    cursor: pointer;}
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;}

@@ -31,7 +31,6 @@
 		$reponse3 = $bdd->query('SELECT * FROM membres WHERE mail ="'.$destinataire.'" ');
 		while ($a = $reponse3->fetch())
                 			{
-
 								$utilisateur_mail = $a['pseudo'];
 								$reqnom =$bdd->prepare("SELECT * FROM membres_projet WHERE nom_user =? AND nom_projet = ?");
                                 $reqnom->execute(array($utilisateur_mail, $projet));
@@ -41,9 +40,22 @@
                                         $insertmbr = $bdd->prepare("INSERT INTO membres_projet(nom_user, nom_projet) VALUES(?, ?) ");
                                         $insertmbr->execute(array($utilisateur_mail, $projet));
                                         $userinfo = $reqnom->fetch();
+									}
 							}
-		}
-						
+	}
+?>
+<?php
+if(isset($_POST["message"]) AND !empty($_POST["message"]))
+{
+	$message = htmlspecialchars($_POST['message']);
+	$insertmsg = $bdd->prepare('INSERT INTO chat(pseudo, message, nom_projet) VALUES(?, ?, ?)');
+	$insertmsg->execute(array($nom, $message, $projet));
+}
+?>
+<?php
+	if(isset($_POST["ajouter_base"]))
+	{
+		header("Location: membres_projet.php?id=".$_SESSION['id']);
 	}
 ?>
 
@@ -76,17 +88,33 @@
 						<?php
 							}
 						?>
-					<br /><br />
-					
+					<br /><br />			
 					<h3>Inviter des membres</h3>
 						<form method="POST" action="">
+							<input type="submit" name="ajouter_base" value="Ajouter membre">
+							<br /><br />
 							<input type="email" name="invite_email" placeholder="Email de ton ami" />
 							<br /><br />
-							<input type="submit" value="Recevoir un mail !" name="mailform"/>
+							<input type="submit" value="Envoyer un mail !" name="mailform"/>
 						</form>
-						<a href ="../pages_web/page_tableau.php">Backlog du jour </a>
+						<a href ="tableau.php" >Backlog du jour </a>
 						<br />
 						<a href ="#">Diagramme gantt</a>
 						<br />
+					<h3>Commentaires sur le projet</h3>
+						<form method="post" action="">
+							<textarea type="text" placeholder="Votre message" name="message"></textarea> <br/>
+							<input type="submit" name="envoyer">
+						</form>
+						<?php
+						$reqmsg=$bdd->query('SELECT* FROM chat WHERE nom_projet ="'.$projet.'" ORDER BY id DESC');
+						while($msg = $reqmsg->fetch())
+						{
+							?>
+							<b><?php echo $msg["pseudo"]; ?> : </b><?php echo $msg["message"]; ?></br>
+							<?php
+						}
+						?>
+			</div>
 	</body>
 </html>

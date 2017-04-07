@@ -125,7 +125,7 @@ if(isset($_POST['forminscription']))
 			<td></td>
 			<td align="center">
 				<input type="submit" value ="Je m'inscris" name="forminscription" class="button"/>
-				<a href="page_connexion" class="button_deja">Je suis déja inscrit</a>
+				<a href="page_connexion.php" class="button_deja">Je suis déja inscrit</a>
 			</td>
 		</tr>
 	</table>
