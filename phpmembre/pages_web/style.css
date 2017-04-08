@@ -1,0 +1,277 @@
+/* ---------- Paramètres généraux ---------*/
+
+body, html {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  overflow-y: hidden
+  }
+
+
+
+/*----- Ecriture -----*/
+
+h1{
+  font-family: 'Muli', sans-serif;
+  font-weight: 100;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: center;
+	}
+
+  p{
+  	margin: 0;
+  	}
+
+/*---------- En-tête ----------*/
+
+header {
+	background-color: #484848;
+  color: #FFFFFF;
+  height: 10vh;
+  }
+
+
+#topbtn{
+  color: #FFFFFF;
+  font-style: italic;
+  position: absolute; /*Bouton retour sur la page d'acceuil - Sauf sur le page d'acceuil*/
+	}
+
+
+/* ---------------Page index --------------*/
+/*---------- Section de la page ----------*/
+
+section {
+	display: flex;
+	flex-direction: column;
+	height: 84.0vh;
+	background-color:#C9C9C9;
+	}
+
+#section_img {
+	display: flex;
+	flex-direction: column;
+  background-repeat: no-repeat;
+	height: 84vh;
+  background:url(Images/O7MF5N0.jpg) -25px -50px;
+  z-index: 0;
+  background-size: calc(125% + 50px);
+	}
+
+
+#bienvenue {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 25vh;
+  color: rgba(255, 255, 255, 0.9);;
+  font-family: 'Muli', sans-serif;
+  font-size: 4.5em;
+  text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+  }
+
+.bar{
+  height:0.5vh;
+  }
+#bar_verte{
+  background-color:#28B485;
+  }
+#bar_orange{
+  background-color: #ffb366;
+  }
+
+/*----- Section page d'acceuil -----*/
+
+#boutons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+	}
+
+.bouton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  opacity: 0.55;
+  font-weight: bold;
+  font-family: 'Alegreya', serif;
+  font-size: 1em;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid #28B485;
+  height: 25vh;
+  width: 25vh;}
+.bouton:hover {
+    background-color: #28B485;
+    opacity: 1;
+    border: 2px solid white;}
+.bouton:active{
+  background-color: #1A7753;
+  }
+
+/*---------Pied de page ---------*/
+
+footer {
+	background-color: #484848;
+	color: white;
+	height: 6vh;
+	display: flex;
+	align-items: center;
+  justify-content: space-between;
+  padding-right: 2%;
+  font-style: italic;
+	}
+
+  a {padding: 0;
+    color: blue;
+    text-decoration: none;}
+
+#lien_github {
+	color: white;
+	padding: 2vh;
+  font-style: italic;
+	}
+#lien_github:hover {text-decoration: underline;}
+
+
+/*----------page tabelau---------*/
+{
+  font-family: 'Segoe UI';
+}
+li {
+  list-style: none;
+  padding: 5px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin: 0 0 5px;
+}
+ul {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 22%;
+  margin: 0 0.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+ul.over {
+  padding-bottom: 55px;
+  background: url('http://www.cufonfonts.com/makeImage.php?width=650&id=1026&size=35&d=y&text=Drop%20Here') center bottom no-repeat #ccc;
+}
+ul.over li {
+  background: #fff;
+}
+
+#board div h3 {display: inline-block; width: 22%; margin: 1%; text-align: center;}
+
+
+/*----------Inscription----------**/
+#form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+
+/* Basic Grey */
+.form {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;}
+.form h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;}
+.form label {
+    display: block;
+    margin: 0px;}
+.form_inscription input {
+	width: 80%;
+  }
+
+.form textarea{
+	padding: 5px 3px 3px 5px;
+  }
+
+.form textarea{
+  height:100px;
+  }
+.form .button {
+    background: #28B485;
+    border: none;
+    width: 40%;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 1px 1px 5px #B6B6B6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px #9E3F3F;
+    cursor: pointer;}
+
+#button_deconnect{
+  background-color: #28B485;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 99%;
+  border-right: 2px solid #484848;
+  }
+#button_deconnect:hover{
+  background: #1A7753
+  }  
+#button_orange{
+  background-color: orange;
+  }
+.form .button:hover {
+  background: #1A7753
+  }
+.form .button_deja {
+	background-color: #C9C9C9;
+	width: 10px;
+	border: none;
+  padding: 10px 25px 10px 25px;
+  color: #FFF;
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;}
+
+/*----------profil----------*/
+#page_avec_profil {display: flex;
+  flex-direction: row;
+  justify-content: center;}
+#profil {background-color: #F7F7F7;
+  width: 20%;
+  min-width: 200px;
+  border-right: 2px solid #484848;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 95%;
+  }
+
+#projet, #page_edition, #page_creation_projet {
+  margin: 5vh;
+  width: 80%;
+  }
+
+  .profil_gauche {display: flex;
+    flex-direction: column;
+    }
+
+  /*----------Projet---------*/
+  #choix_projet {background-color: #F7F7F7; }
