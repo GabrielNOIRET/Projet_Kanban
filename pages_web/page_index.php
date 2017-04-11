@@ -12,6 +12,8 @@
   <body>
     <!--ajouter le header avec le titre sans le boutton pour revenir à l'accueil-->
     <?php include 'element_page/header.php'; ?>
+    <!-- ajouter une ligne verte--> 
+    <div class="bar" id="bar_verte"></div>
 
       <!--div pour css-->
     <div id="section_img">

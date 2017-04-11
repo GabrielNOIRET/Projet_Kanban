@@ -38,15 +38,39 @@ if(isset($_POST['formconnexion']))
 	<meta charset="utf-8">
 </head>
 <body>
-<div align="center">
-	<h2>Connexion</h2>
+<div id='form'>
 <br /><br />
-	<form method="POST" action="">
-		<input type="email" name="mailconnect" placeholder="Mail"/>
-		<input type="password" name="mdpconnect" placeholder="Mot de passe"/>
-		<input type="submit" name="formconnexion" vulue ="Se connecter"/>
+	<form method="POST" action="" class="form">
+		<h1>Connexion</h1>
+		<table>
+			
+			<tr>
+				<td align="right">
+					<label for="mail">Mail : </label>
+			</td>
+			<td>
+				<input type="email" name="mailconnect" placeholder="Mail"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td align="right">
+				<label for="mdp">Mot de passe : </label>
+			</td>
+			<td>
+				<input type="password" name="mdpconnect" placeholder="Mot de passe"/>
+			</td>
+		</tr>
+		<
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" name="formconnexion" vulue ="Se connecter" class="button"/>
+				<a href="page_inscription.php" class="button_deja">m'inscrire</a>
+			</td>
+		</tr>
+	</table>
 </form>
-
 
 
 

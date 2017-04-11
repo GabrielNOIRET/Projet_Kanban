@@ -5,7 +5,8 @@ body, html {
   padding: 0;
   margin: 0;
   flex-direction: column;
-  overflow-y: hidden
+  overflow-y: hidden;
+  overflow-x: hidden
   }
 
 
@@ -16,8 +17,8 @@ h1{
   font-family: 'Muli', sans-serif;
   font-weight: 100;
   font-size: 1.8em;
-  text-align: center;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
 	}
 
   p{
@@ -72,9 +73,14 @@ section {
   text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
   }
 
-#bar_verte{
-  background-color: #28B485;
+.bar{
   height:0.5vh;
+  }
+#bar_verte{
+  background-color:#28B485;
+  }
+#bar_orange{
+  background-color: #ffb366;
   }
 
 /*----- Section page d'acceuil -----*/
@@ -98,8 +104,8 @@ section {
   background-color: white;
   text-decoration: none;
   border: 2px solid #28B485;
-  height: 15vh;
-  width: 15vh;}
+  height: 25vh;
+  width: 25vh;}
 .bouton:hover {
     background-color: #28B485;
     opacity: 1;
@@ -116,6 +122,9 @@ footer {
 	height: 6vh;
 	display: flex;
 	align-items: center;
+  justify-content: space-between;
+  padding-right: 2%;
+  font-style: italic;
 	}
 
   a {padding: 0;
@@ -162,14 +171,14 @@ ul.over li {
 
 
 /*----------Inscription----------**/
-#form_iscription {
+#form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	}
 
 /* Basic Grey */
-.form_inscription {
+.form {
     margin-left:auto;
     margin-right:auto;
     max-width: 500px;
@@ -179,28 +188,28 @@ ul.over li {
     color: #888;
     text-shadow: 1px 1px 1px #FFF;
     border:1px solid #E4E4E4;}
-.form_inscription h1 {
+.form h1 {
     font-size: 25px;
     padding: 0px 0px 10px 40px;
     display: block;
     border-bottom:1px solid #E4E4E4;
     margin: -10px -15px 30px -10px;;
     color: #888;}
-.form_inscription label {
+.form label {
     display: block;
     margin: 0px;}
 .form_inscription input {
 	width: 80%;
-}
+  }
 
-.form_inscription textarea{
+.form textarea{
 	padding: 5px 3px 3px 5px;
-}
+  }
 
-.form_inscription textarea{
-    height:100px;
-}
-.form_inscription .button {
+.form textarea{
+  height:100px;
+  }
+.form .button {
     background: #28B485;
     border: none;
     width: 40%;
@@ -210,11 +219,49 @@ ul.over li {
     border-radius: 3px;
     text-shadow: 1px 1px 1px #9E3F3F;
     cursor: pointer;}
-.form_inscription .button:hover {
-    background: #1A7753
-}
 
-.form_inscription .button_deja {
+#button_deconnect{
+  background-color: #28B485;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  width: 99%;
+  border-right: 2px solid #484848;
+  }
+#button_deconnect:hover{
+  background: #1A7753
+  }  
+#button_orange{
+  background-color: orange;
+  }
+
+#button_orange_creation{
+  background-color: orange;
+  text-align: left;
+  width: 150px;
+  }
+
+#button_orange_select{
+  background-color: orange;
+  display: flex;
+  color: white;
+  width: 15%;
+  flex: 1;
+  border: none;
+  /*margin: 15px 30px 15px 30px;*/
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;
+  justify-content: center;
+  }
+
+.form .button:hover {
+  background: #1A7753
+  }
+.form .button_deja {
 	background-color: #C9C9C9;
 	width: 10px;
 	border: none;
@@ -224,3 +271,142 @@ ul.over li {
   border-radius: 3px;
   text-shadow: 1px 1px 1px #9E3F3F;
   cursor: pointer;}
+
+/*  input[type="radio"] {
+    display:none;
+}*/
+
+#select_button{
+  display: flex;
+  background-color: purple;
+  }
+
+input[name="forminscription"]{
+  background-color: red;
+}
+
+/*----------profil----------*/
+#page_avec_profil {display: flex;
+  flex-direction: row;}
+#profil {background-color: #F7F7F7;
+  width: 20%;
+  min-width: 200px;
+  border-right: 2px solid #484848;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 95%;
+  }
+
+#projet, #page_edition, #page_creation_projet {
+  margin: 5vh;
+  width: 80%;
+  }
+
+  .profil_gauche {display: flex;
+    flex-direction: column;
+    }
+
+  /*----------Projet---------*/
+  #choix_projet {background-color: #F7F7F7;
+    display: flex;
+    justify-content: space-between;}
+
+  #projets {display: flex;
+    flex-direction: column;}
+
+li#choix_projet, form#projets.form{
+    margin:0; 
+    padding: 0;
+    width: 15vh;
+    height: 15vh;
+    margin: 0.5vh;
+    background-color: #ecc886;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+}
+div#choix_projet.form{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/* ----------------profil projet-------------------- */
+
+#projet_gauche {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+#espace_com{background-color: #CBCBCB;
+  border-left: 1px solid grey;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   overflow-y: visible;
+  }
+
+#page_profil_projet{
+  display: flex;
+  flex-direction: row;}
+
+#entete_projet{background-color: #DCCA97;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3vh;}
+
+#pied_projet{background-color: white;
+  height: 60%;
+  display: flex;}
+
+#pied_projet_1{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  width: 60%;}
+#pied_projet_2{
+  height: 30%;
+  display: flex;
+  justify-content: center; 
+  border-left: 1px solid black; 
+  align-items: center;}
+#pied_projet_3{
+  height: 30%;
+  display: flex;
+  justify-content: center; 
+  border-left: 1px solid black; 
+  align-items: center;}
+#pied_projet_4{
+  display: flex;
+  justify-content: center; 
+  border-left: 1px solid black; 
+  align-items: center;
+  height: 40%;}
+#pied_projet_5{
+  width: 40%;}
+
+.bouton_page_projet { background-color: #CBCBCB;
+  display: flex;
+  color: white;
+  width: 50%;
+  height: 50%;
+  border: none;
+  /*margin: 15px 30px 15px 30px;*/
+  box-shadow: 1px 1px 5px #B6B6B6;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #9E3F3F;
+  cursor: pointer;
+  justify-content: center;
+
+  }}
+
+
+

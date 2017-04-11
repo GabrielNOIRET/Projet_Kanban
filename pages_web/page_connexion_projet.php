@@ -9,6 +9,8 @@
   <body>
     <!--ajouter header avec le titre et le button pour revenir à l'accueil-->
     <?php include 'element_page/header_btn.php'; ?>
+        <!-- ajouter une ligne verte--> 
+    <div class="bar" id="bar_verte"></div>
 
   <section>
     <!-- main body: chercher le fichier de php pour aller dans la page profil des utilisateurs, qu'il est permit de éditer le profil et  se déconnecter -->

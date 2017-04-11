@@ -5,5 +5,4 @@
     <!-- titre--> 
   <h1>Module de gestion de projet</h1>
 </header>
-<!--ligne verte--> 
-<div id="bar_verte"></div>
+

@@ -15,13 +15,15 @@
 }
 
 body .fc { /* extra precedence to overcome jqui */
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 #calendar{
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+
 }
+
 
 
 /* Colors

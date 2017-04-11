@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>PREMIERS PAS AVEC BRACKETS</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
-        <link rel="stylesheet" href="../pages_web/style.css">
+        <link rel="stylesheet" href="tab.css">
     </head>
     <body>     
                

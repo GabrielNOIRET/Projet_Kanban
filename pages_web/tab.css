@@ -1,0 +1,28 @@
+{
+  font-family: 'Segoe UI';
+}
+li {
+  list-style: none;
+  padding: 5px;
+  background: grey;
+  border-radius: 5px;
+  margin: 0 0 5px;
+}
+ul {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 22%;
+  margin: 0 0.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+ul.over {
+  padding-bottom: 55px;
+  background: url('http://www.cufonfonts.com/makeImage.php?width=650&id=1026&size=35&d=y&text=Drop%20Here') center bottom no-repeat #ccc;
+}
+ul.over li {
+  background: #fff;
+}
+
+#board div h3 {display: inline-block; width: 22%; margin: 1%; text-align: center;}

@@ -34,7 +34,7 @@
                                         $_SESSION['nom_user'] = $userinfo['nom_user'];
                                         $_SESSION['nom_projet'] = $userinfo['nom_projet'];
                                         $confirmation = "L'utilisateur " .$ch. " a bien été ajouté au projet";
-                                        header("Location: ../pages_web/page_profil_projet.php?id=".$ch);
+                                        header("Location: ../pages_web/page_profil.php?id=".$ch);
                                     }
                                     else
                                     {
@@ -47,6 +47,14 @@
                         }
             }
         }
+    ?>
+    <?php
+    if(isset($_POST['retour']))
+    {
+        header("Location: ../pages_web/page_profil.php?id=".$SESSION['id']);
+    }
+
+
     ?>
 <html>
     <head>
@@ -76,7 +84,8 @@
             <?php 
                 } 
             ?>
-        <input type="submit" name="sub" value="ajouter" />
+        <input type="submit" name="sub" value="ajouter"  />
+        <input type="submit" name="retour" value="retour en arrière"  />
         </form>
         </ul>
             <?php

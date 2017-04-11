@@ -1,25 +1,21 @@
 function ajoutTache(e){
     e.preventDefault();
     var new_tache = form.elements['tache'].value;
-    d = document.getElementById("noms_projet").value;
-    if (d == "Gabriel"){
-        document.getElementById('todo').innerHTML += "<li id='tache' href='#' style='color: blue;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
-    }else if (d == "Guillaume"){
-        document.getElementById('todo').innerHTML += "<li href='#' style='color: maroon;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
-    }else if (d == "Ismaël"){
-        document.getElementById('todo').innerHTML += "<li href='#' style='color: green;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
-    }else if (d == "Quentin"){
-        document.getElementById('todo').innerHTML += "<li href='#' style='color: purple;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
+    var d = document.getElementById("noms_projet"), d_value = d.value;
+    //var id_noms = form.elements['noms_projet'].id;
+    /*document.getElementById('todo').innerHTML += "<li id='"+id_noms+"' href='#' style='color: blue;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache_value+"</li>";*/
+    if (d_value == "Gabriel"){
+        document.getElementById('todo').innerHTML += "<li id='test1' href='#' style='color: blue;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
+    }else if (d_value == "Guillaume"){
+        document.getElementById('todo').innerHTML += "<li id='test2' href='#' style='color: maroon;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
+    }else if (d_value == "Ismael"){
+        document.getElementById('todo').innerHTML += "<li id='test3' href='#' style='color: green;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
+    }else if (d_value == "Quentin"){
+        document.getElementById('todo').innerHTML += "<li id='test4' href='#' style='color: purple;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
     }else{
-        document.getElementById('todo').innerHTML += "<li href='#' style='color: teal;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
+        document.getElementById('todo').innerHTML += "<li id='test5' href='#' style='color: teal;' draggable='true' ondragstart='drag(event)' ondragover='allowDrop(event)' ondrop='drop(event)'>* "+new_tache+"</li>";
     }
 }
-
-/*function increment(){
-    for(var i = 0, li.length, i++){
-        
-    }
-}*/
 
 function allowDrop(e) {
     e.preventDefault();

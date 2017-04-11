@@ -76,9 +76,9 @@ if(isset($_POST['forminscription']))
 	<meta charset="utf-8">
 </head>
 <body>
-<div id='form_iscription'>
+<div id='form'>
 <br /><br />
-	<form method="POST" action="" class="form_inscription">
+	<form method="POST" action="" class="form">
 		<h1>Inscription</h1>
 		<table>
 			<tr>
@@ -123,7 +123,7 @@ if(isset($_POST['forminscription']))
 		</tr>
 		<tr>
 			<td></td>
-			<td align="center">
+			<td>
 				<input type="submit" value ="Je m'inscris" name="forminscription" class="button"/>
 				<a href="page_connexion.php" class="button_deja">Je suis déja inscrit</a>
 			</td>

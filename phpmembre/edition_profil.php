@@ -1,7 +1,13 @@
+
+
 <?php
 session_start();
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=espace_membre', 'root', '');
-
+$nom = $_SESSION['pseudo'];
+$requser = $bdd->prepare("SELECT * FROM membres WHERE id = ?");
+$requser->execute(array($_SESSION['id']));
+$user = $requser->fetch();
+$mail1 = $user['mail'];
 if(isset($_SESSION['id']))
 {
 	$requser = $bdd->prepare("SELECT * FROM membres WHERE id=? ");
@@ -78,16 +84,38 @@ if(isset($_SESSION['id']))
 ?>
 
 <html>
-	<head>
-		<title>Edition du profil</title>
-		<meta charset="utf-8">
-	</head>
 	<body>
-		<div align="center">
-			<h2>Edition de mon profil </h2>
+	<div class="profil_gauche">
+		<div id="profil">
+			<br>
+				<?php
+					if(!empty($userinfo['avatar']))
+					{
+				?>
+					<img src="membres/avatar/<?php echo $userinfo['avatar'];?>" width="150" />
+				<?php 
+					}
+					else
+					{
+				?>
+					<img src="http://www.aruvart.com/tableaux-photos/Peinture-abstraite-DOUCE-TENTATION_840.jpg" width="150" />
+					
+				
+					<h2>Profil de <?php echo $nom; ?></h2>
+					<?php
+					}
+					echo "pseudo = ".$nom;
+					?>
+					<br />
+					<?php
+					echo "Mail = ".$mail1;
+				?>	
+				</div>
+				<a  id="button_deconnect" href ="../phpmembre/deconnexion.php">Se deconnecter </a>
 		</div>
-		<div align="left">
-			<form method="POST" action ="" enctype="multipart/form-data">
+	<div align="center" id="page_edition">
+			<form method="POST" action ="" class="form" enctype="multipart/form-data">
+				<h1>Edition de mon profil </h1>
 				<label>Pseudo : </label>
 				<input type="text" name="newpseudo" placeholder="Pseudo" value="<?php echo $user['pseudo'];?>"/><br /><br />
 				<label>Mail : </label>
@@ -98,8 +126,11 @@ if(isset($_SESSION['id']))
 				<input type="password" name="newmdp2" placeholder="Confirmation mot de passe" /><br /><br />
 				<label>Nouvelle photo de profil</label>
 				<input type="file" name="avatar" /><br /><br />
-				<input type="submit" value="Mettre a jour le formulaire" />
+				<input type="submit" value="Mettre a jour" class="button"/>
+		
 			</form>
+
+			
 		<?php
 			if(isset($msg)){echo $msg;}
 		?>

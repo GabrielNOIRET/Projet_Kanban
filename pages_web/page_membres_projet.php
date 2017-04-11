@@ -9,6 +9,7 @@
   <body>
     <!--ajouter header avec le titre et le button pour revenir à l'accueil-->
     <?php include 'element_page/header_btn.php'; ?>
+    <div class="bar" id="bar_verte"></div>
 
 
   <section>
